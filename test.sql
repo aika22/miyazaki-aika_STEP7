@@ -27,7 +27,7 @@ INNER JOIN orders
 
 -- 問6
 SELECT
-    products.products_name AS 商品名,
+    products.product_name AS 商品名,
     order_items.quantity AS 数量,
     products.price AS 単価,
     (order_items.quantity * products.price) AS 金額
@@ -74,12 +74,12 @@ LIMIT 1;
 
 -- 問10
 SELECT
-    products.name,
+    products.product_name,
     COUNT(order_items.product_id) AS 注文回数
 FROM products
 JOIN order_items
 ON products.id = order_items.product_id
-GROUP BY products.name;
+GROUP BY products.product_name;
 
 -- 問11
 SELECT
